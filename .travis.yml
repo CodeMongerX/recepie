@@ -5,10 +5,14 @@ python:
 services:
   - docker
 
+<<<<<<< HEAD
 env:
   - DOCKER_COMPOSE_VERSION=1.22.0
 
 before_script: pip install docker-compose
+=======
+before_script: pip install docker-compose flake8
+>>>>>>> e08e063f55a736954cc6da09e5dd663487a4108f
 
 script:
   - docker-compose run app sh -c "python manage.py test && flake8"
