@@ -16,3 +16,13 @@ class ModelTests(TestCase):
         self.assertEqual(user.email, email)
         self.assertTrue(user.check_password(password))
 
+    def test_email_for_lowercase(self):
+        """lowerCases"""
+        email='test@rajeEv.com'
+        user = get_user_model().objects.create_user(
+            email=email,
+            password='125478963@#5$!QWERty'
+        )
+
+        self.assertEqual(user.email, email.lower())
+
