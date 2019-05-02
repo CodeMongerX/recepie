@@ -15,7 +15,7 @@ class adminSiteTest(TestCase):
         self.user = get_user_model().objects.create_user(
             email='someuser@rajeevinc.com',
             password='test@123',
-            name='someguy'            
+            name='someguy'
         )
 
     def test_user_listed(self):
